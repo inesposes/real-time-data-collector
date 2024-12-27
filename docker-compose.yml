@@ -1,0 +1,27 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo_db
+    ports:
+      - "27017:27017"  
+    volumes:
+      - mongo_data:/data/db  
+    networks:
+      - practice_network
+
+  data-inserter:
+    image: inesposes/practica-acceso-datos:latest 
+    container_name: data-inserter
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo_db:27017
+    networks:
+      - practice_network
+
+volumes:
+  mongo_data:
+
+networks:
+  practice_network:
+    driver: bridge
