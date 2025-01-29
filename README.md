@@ -1,6 +1,6 @@
-# Ejercicio: Desarrollo e integración de scripts en Python
+# **Ejercicio: Desarrollo e integración de scripts en Python**
 
-## 📜 Descripción
+## **Descripción**
 
 Este proyecto forma parte de una entrega para la asignatura Sistemas de Big Data del curso de especialización en IA y Big Data.
 
@@ -13,13 +13,16 @@ Adicionalmente, se ha realizado un script que consulta una API de noticias [News
 > Se presupone que para este trabajo se tiene una conexión a una VPN del CESGA, gracias a unas cuentas proporcionadas con propósito académico.  No obstante, se incluyen todas las explicaciones para poder probarlo en local.
 ---
 
-## 📁 Estructura del proyecto
+## **Estructura del proyecto**
 
 ```plaintext
 📂 practica-acceso-datos
 ├── 📁 datasets
 │   ├── stations.csv
 │   ├── stations.parquet
+├── 📁 requirements
+│   ├── requirements-dockerfile.txt
+│   ├── requirements.txt
 ├── 📁 scripts
 │   ├── api_bikes.py
 │   ├── api_news.py
@@ -29,17 +32,16 @@ Adicionalmente, se ha realizado un script que consulta una API de noticias [News
 ├── 🐳 Dockerfile
 ├── 🛠️env.example
 ├── 📄README.md
-├── 📦requirements.txt
 ```
 
 ---
-##  ⚙️Requisitos
+##  **Requisitos**
 - Python 3.8+
 - Docker instalado o posibilidad de conexión a la VPN del CESGA
 
 ---
 
-## 💻 Instalación
+## **Instalación**
 1. Clona este repositorio:
    ```bash
    git clone https://github.com/inesposes/practica-acceso-datos
@@ -47,7 +49,7 @@ Adicionalmente, se ha realizado un script que consulta una API de noticias [News
    ```
 2. Instala las dependencias:
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements/requirements.txt
    ```
 3. Crea un .env en el que incluyas las variables de entorno del .env.example. Más adelante se detallará con qué valores cubrirlas. 
 4. Conexión servicio MongoDB. Dos opciones:
@@ -62,7 +64,7 @@ Adicionalmente, se ha realizado un script que consulta una API de noticias [News
         ```
 --- 
 
-## 📝Scripts
+## **Scripts**
 
 ### 🚴‍♂️api_bikes.py
 - **Funcionalidad:**
