@@ -1,5 +1,5 @@
 FROM python:3.12-slim
-COPY requirements/requirements-dockerfile.txt /
+COPY ../requirements/requirements-dockerfile.txt /
 COPY scripts/api_bikes.py /
 RUN pip install --no-cache-dir -r /requirements-dockerfile.txt
 
