@@ -20,6 +20,9 @@ Adicionalmente, se ha realizado un script que consulta una API de noticias [News
 ├── 📁 datasets
 │   ├── stations.csv
 │   ├── stations.parquet
+├── 📁 docker
+│   ├── docker-compose.yml
+│   ├── Dockerfile
 ├── 📁 requirements
 │   ├── requirements-dockerfile.txt
 │   ├── requirements.txt
@@ -27,10 +30,8 @@ Adicionalmente, se ha realizado un script que consulta una API de noticias [News
 │   ├── api_bikes.py
 │   ├── api_news.py
 │   ├── file_export.py
-├── 🔗 .gitignore
-├── 🐳 docker-compose.yml
-├── 🐳 Dockerfile
-├── 🛠️env.example
+├── 🛠️.env.example
+├── 🔗.gitignore
 ├── 📄README.md
 ```
 
@@ -44,8 +45,8 @@ Adicionalmente, se ha realizado un script que consulta una API de noticias [News
 ## **Instalación**
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/inesposes/practica-acceso-datos
-   cd practica-acceso-datos
+   git clone git@github.com:inesposes/real-time-data-collector.git
+   cd real-time-data-collector
    ```
 2. Instala las dependencias:
    ```bash
@@ -60,7 +61,7 @@ Adicionalmente, se ha realizado un script que consulta una API de noticias [News
       - Cubrir la variable "SERVER" del .env con "mongo_db".  
       - Ejecuta el siguiente comando:
         ```bash
-          docker-compose up -d
+          docker compose -f docker/docker-compose.yml up -d
         ```
 --- 
 
